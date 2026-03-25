@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>About Us — DigiPixi Limited</title>
+<link rel="stylesheet" href="css/style.css"/>
+<style>
+.about-hero{padding:140px 60px 80px;text-align:center;position:relative;overflow:hidden;}
+.about-hero .grid-bg{opacity:.6;}
+.hero-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:300px;background:radial-gradient(ellipse,rgba(0,229,255,.07) 0%,transparent 70%);}
+.about-story{padding:100px 60px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+.about-story .text p{font-size:15px;color:var(--grey);line-height:1.8;margin-bottom:16px;}
+.about-values{padding:100px 60px;background:var(--bg2);}
+.values-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:48px;}
+.value-card{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:24px;text-align:center;transition:all .3s;}
+.value-card:hover{border-color:rgba(0,229,255,.3);transform:translateY(-4px);}
+.value-icon{font-size:32px;margin-bottom:12px;}
+.value-card h4{font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:#fff;margin-bottom:8px;}
+.value-card p{font-size:12px;color:var(--grey);line-height:1.6;}
+.about-visual{display:flex;flex-direction:column;gap:16px;}
+.about-stat-card{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:22px 26px;display:flex;align-items:center;gap:20px;}
+.about-stat-card .num{font-family:'Syne',sans-serif;font-size:40px;font-weight:800;color:#fff;min-width:80px;}
+.about-stat-card .num span{color:var(--cyan);}
+.about-stat-card .desc{font-size:13px;color:var(--grey);line-height:1.6;}
+@media(max-width:1024px){.about-story{grid-template-columns:1fr;gap:40px;}.values-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:768px){.about-hero,.about-story,.about-values{padding:80px 24px 60px;}.values-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div class="cursor" id="cursor"></div>
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-box"><span class="d">DIGI</span><div class="dl"></div><span class="p">PIXI</span></div>
+    <div class="nav-brand">
+      <div class="name"><span class="digi">Digi</span><span class="pixi">Pixi</span></div>
+      <span class="ltd">Limited</span>
+    </div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="portfolio.html">Work</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="contact.html" class="nav-cta">Get In Touch</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<section class="about-hero">
+  <div class="grid-bg"></div>
+  <div class="hero-glow"></div>
+  <div style="position:relative;z-index:2;" class="reveal">
+    <p class="section-eyebrow">Our Story</p>
+    <h1 class="section-title">We Are <span class="outline">DigiPixi.</span></h1>
+    <div class="accent-bar" style="margin:16px auto;"></div>
+    <p class="section-sub" style="margin:0 auto;">A passionate team of designers, developers and digital marketers helping UK businesses grow online.</p>
+  </div>
+</section>
+
+<section class="about-story">
+  <div class="text reveal">
+    <p class="section-eyebrow">Who We Are</p>
+    <h2 class="section-title" style="font-size:clamp(28px,3vw,42px);">Built by People Who<br/><span class="outline">Care About Results.</span></h2>
+    <div class="accent-bar"></div>
+    <p>DigiPixi Limited was founded with one mission — to help small and medium businesses across the UK compete online without breaking the bank.</p>
+    <p>We know how frustrating it is to have a great business but struggle to get found online. That's why we created DigiPixi — a one-stop digital agency that handles everything from your logo to your Google Ads.</p>
+    <p>Whether you're a restaurant looking for your first website, a salon that needs better social media, or a startup ready to scale — we've got you covered.</p>
+    <a href="contact.html" class="btn-primary" style="margin-top:24px;">Work With Us →</a>
+  </div>
+  <div class="about-visual reveal">
+    <div class="about-stat-card">
+      <div class="num"><span class="counter" data-target="50" data-suffix="+">0+</span></div>
+      <div class="desc">Happy clients across the UK and beyond</div>
+    </div>
+    <div class="about-stat-card">
+      <div class="num"><span class="counter" data-target="3" data-suffix="wk">0wk</span></div>
+      <div class="desc">Average website delivery time — urgent in 3 days</div>
+    </div>
+    <div class="about-stat-card">
+      <div class="num"><span class="counter" data-target="9" data-suffix="+">0+</span></div>
+      <div class="desc">Digital services all under one roof</div>
+    </div>
+    <div class="about-stat-card">
+      <div class="num"><span class="counter" data-target="5" data-suffix="★">0★</span></div>
+      <div class="desc">Client satisfaction rating consistently maintained</div>
+    </div>
+  </div>
+</section>
+
+<section class="about-values">
+  <div class="reveal" style="text-align:center;">
+    <p class="section-eyebrow">Our Values</p>
+    <h2 class="section-title">What Drives<br/><span class="outline">Everything We Do.</span></h2>
+    <div class="accent-bar" style="margin:16px auto;"></div>
+  </div>
+  <div class="values-grid stagger">
+    <div class="value-card">
+      <div class="value-icon">🎯</div>
+      <h4>Results First</h4>
+      <p>We measure success by your growth — not just deliverables.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-icon">💎</div>
+      <h4>Quality Always</h4>
+      <p>Every pixel, every word, every campaign is crafted with care.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-icon">🤝</div>
+      <h4>Honest Partnership</h4>
+      <p>Transparent pricing, honest advice — no hidden agendas.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-icon">⚡</div>
+      <h4>Speed & Reliability</h4>
+      <p>We deliver on time, every time. No excuses, no delays.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand"><a href="index.html" class="nav-logo"><div class="nav-logo-box"><span class="d">DIGI</span><div class="dl"></div><span class="p">PIXI</span></div><div class="nav-brand"><div class="name"><span class="digi">Digi</span><span class="pixi">Pixi</span></div><span class="ltd">Limited</span></div></a><p>Your trusted UK web digital agency.</p></div>
+    <div class="footer-col"><h4>Services</h4><ul><li><a href="services.html">Web Design</a></li><li><a href="services.html">Branding</a></li><li><a href="services.html">Google Ads</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="portfolio.html">Our Work</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:hello@digipixi.co.uk">hello@digipixi.co.uk</a></li><li><a href="tel:+4407368471349">+44 07368 471 349</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>© 2025 <span>DigiPixi Limited</span>. All rights reserved.</p><div class="footer-socials"><a href="#" class="social-btn">📘</a><a href="#" class="social-btn">📸</a></div></div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>

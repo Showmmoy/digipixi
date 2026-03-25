@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Services — DigiPixi Limited</title>
+<link rel="stylesheet" href="css/style.css"/>
+<style>
+.services-hero{padding:140px 60px 80px;text-align:center;position:relative;overflow:hidden;}
+.services-hero .grid-bg{opacity:.6;}
+.hero-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:300px;background:radial-gradient(ellipse,rgba(0,229,255,.07) 0%,transparent 70%);}
+.services-full{padding:80px 60px 120px;}
+.services-big-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.svc{background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:32px;position:relative;overflow:hidden;transition:all .4s;}
+.svc::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--grad);transform:scaleX(0);transition:transform .4s;transform-origin:left;}
+.svc:hover{border-color:rgba(0,229,255,.3);transform:translateY(-6px);box-shadow:0 24px 60px rgba(0,0,0,.5);}
+.svc:hover::after{transform:scaleX(1);}
+.svc-num{font-family:'Bebas Neue',sans-serif;font-size:52px;color:rgba(0,229,255,.08);line-height:1;margin-bottom:12px;}
+.svc-icon{font-size:32px;margin-bottom:16px;}
+.svc h3{font-family:'Syne',sans-serif;font-size:18px;font-weight:700;color:#fff;margin-bottom:12px;}
+.svc p{font-size:13px;color:var(--grey);line-height:1.7;margin-bottom:20px;}
+.svc-features{list-style:none;display:flex;flex-direction:column;gap:7px;}
+.svc-features li{font-size:12px;color:var(--light);display:flex;align-items:center;gap:8px;}
+.svc-features li::before{content:'✓';color:var(--cyan);font-size:11px;font-weight:700;}
+.process-section{padding:100px 60px;background:var(--bg2);}
+.process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:56px;position:relative;}
+.process-steps::before{content:'';position:absolute;top:28px;left:10%;right:10%;height:1px;background:linear-gradient(90deg,transparent,var(--cyan),transparent);opacity:.2;}
+.step{text-align:center;padding:28px 20px;}
+.step-num{width:56px;height:56px;border-radius:50%;border:1px solid rgba(0,229,255,.25);background:rgba(0,229,255,.05);display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:24px;color:var(--cyan);margin:0 auto 18px;}
+.step h4{font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:#fff;margin-bottom:8px;}
+.step p{font-size:12px;color:var(--grey);line-height:1.6;}
+@media(max-width:1024px){.services-big-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:768px){.services-hero,.services-full,.process-section{padding:80px 24px 60px;}.services-big-grid{grid-template-columns:1fr;}.process-steps{grid-template-columns:repeat(2,1fr);}}
+</style>
+</head>
+<body>
+<div class="cursor" id="cursor"></div>
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-box"><span class="d">DIGI</span><div class="dl"></div><span class="p">PIXI</span></div>
+    <div class="nav-brand">
+      <div class="name"><span class="digi">Digi</span><span class="pixi">Pixi</span></div>
+      <span class="ltd">Limited</span>
+    </div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html" class="active">Services</a></li>
+    <li><a href="portfolio.html">Work</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="contact.html" class="nav-cta">Get In Touch</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<section class="services-hero">
+  <div class="grid-bg"></div>
+  <div class="hero-glow"></div>
+  <div style="position:relative;z-index:2;" class="reveal">
+    <p class="section-eyebrow">What We Offer</p>
+    <h1 class="section-title">Services Built for<br/><span class="outline">Real Results.</span></h1>
+    <div class="accent-bar" style="margin:16px auto;"></div>
+    <p class="section-sub" style="margin:0 auto;">Everything your business needs to dominate the digital space — all under one roof.</p>
+  </div>
+</section>
+
+<section class="services-full">
+  <div class="services-big-grid stagger">
+
+    <div class="svc">
+      <div class="svc-num">01</div>
+      <div class="svc-icon">🌐</div>
+      <h3>Website Design & Development</h3>
+      <p>Professional, fast and mobile-first websites built to convert visitors into paying customers. From simple landing pages to full ecommerce stores.</p>
+      <ul class="svc-features">
+        <li>Mobile responsive design</li>
+        <li>WordPress / Custom HTML</li>
+        <li>SEO optimised structure</li>
+        <li>Contact forms & integrations</li>
+        <li>Delivered in 2–3 weeks</li>
+      </ul>
+    </div>
+
+    <div class="svc">
+      <div class="svc-num">02</div>
+      <div class="svc-icon">🎨</div>
+      <h3>Logo & Brand Design</h3>
+      <p>Memorable brand identities that make you stand out. Logos, colour palettes, typography, business cards, banners, flyers and menus.</p>
+      <ul class="svc-features">
+        <li>Custom logo design</li>
+        <li>Full brand identity kit</li>
+        <li>Business card design</li>
+        <li>Banner & flyer design</li>
+        <li>Menu design</li>
+      </ul>
+    </div>
+
+    <div class="svc">
+      <div class="svc-num">03</div>
+      <div class="svc-icon">📱</div>
+      <h3>UI / UX Design</h3>
+      <p>Beautiful, user-friendly interfaces that keep your customers engaged and coming back. We design experiences that convert.</p>
+      <ul class="svc-features">
+        <li>User experience research</li>
+        <li>Wireframing & prototyping</li>
+        <li>App & web interface design</li>
+        <li>User journey mapping</li>
+        <li>Figma & Adobe XD</li>
+      </ul>
+    </div>
+
+    <div class="svc">
+      <div class="svc-num">04</div>
+      <div class="svc-icon">🎯</div>
+      <h3>Google Ads & PPC</h3>
+      <p>Targeted advertising that puts your business in front of people actively searching for what you offer. Maximum ROI, minimum waste.</p>
+      <ul class="svc-features">
+        <li>Campaign setup & management</li>
+        <li>Keyword research</li>
+        <li>Ad copywriting</li>
+        <li>Landing page optimisation</li>
+        <li>Monthly reporting</li>
+      </ul>
+    </div>
+
+    <div class="svc">
+      <div class="svc-num">05</div>
+      <div class="svc-icon">📣</div>
+      <h3>Social Media Marketing</h3>
+      <p>Strategic content creation and management that grows your following and turns followers into paying customers.</p>
+      <ul class="svc-features">
+        <li>Content strategy & calendar</li>
+        <li>Post design & scheduling</li>
+        <li>Community management</li>
+        <li>Paid social campaigns</li>
+        <li>Monthly analytics report</li>
+      </ul>
+    </div>
+
+    <div class="svc">
+      <div class="svc-num">06</div>
+      <div class="svc-icon">📍</div>
+      <h3>Google My Business Setup</h3>
+      <p>Get found on Google Maps and local search results. We set up and optimise your GMB profile to attract local customers.</p>
+      <ul class="svc-features">
+        <li>Profile setup & verification</li>
+        <li>Category optimisation</li>
+        <li>Photo & content upload</li>
+        <li>Review strategy</li>
+        <li>Local SEO optimisation</li>
+      </ul>
+    </div>
+
+    <div class="svc">
+      <div class="svc-num">07</div>
+      <div class="svc-icon">🎬</div>
+      <h3>Video Promotion</h3>
+      <p>Engaging video content that tells your brand story, promotes your products and drives real results across social media and YouTube.</p>
+      <ul class="svc-features">
+        <li>Promo video production</li>
+        <li>Social media reels</li>
+        <li>YouTube ads</li>
+        <li>Animated graphics</li>
+        <li>Video editing & captions</li>
+      </ul>
+    </div>
+
+    <div class="svc">
+      <div class="svc-num">08</div>
+      <div class="svc-icon">📊</div>
+      <h3>Digital Marketing</h3>
+      <p>Full-service digital marketing strategies built around your business goals. SEO, email marketing, content marketing and more.</p>
+      <ul class="svc-features">
+        <li>SEO & content strategy</li>
+        <li>Email marketing campaigns</li>
+        <li>Lead generation</li>
+        <li>Analytics & reporting</li>
+        <li>Competitor analysis</li>
+      </ul>
+    </div>
+
+    <div class="svc">
+      <div class="svc-num">09</div>
+      <div class="svc-icon">📅</div>
+      <h3>Social Media Management</h3>
+      <p>Let us run your social media completely. We handle everything — content, posting, engagement and growth — so you can focus on your business.</p>
+      <ul class="svc-features">
+        <li>Full account management</li>
+        <li>Daily/weekly posting</li>
+        <li>Follower engagement</li>
+        <li>Influencer outreach</li>
+        <li>Growth reporting</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process-section">
+  <div class="reveal" style="text-align:center;">
+    <p class="section-eyebrow">How We Work</p>
+    <h2 class="section-title">Our Simple<br/><span class="outline">4-Step Process</span></h2>
+    <div class="accent-bar" style="margin:16px auto;"></div>
+  </div>
+  <div class="process-steps stagger">
+    <div class="step">
+      <div class="step-num">1</div>
+      <h4>Discovery Call</h4>
+      <p>Free 30-min consultation to understand your goals, target audience and budget.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <h4>Strategy & Quote</h4>
+      <p>We put together a clear plan and transparent quote — no surprises.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <h4>Design & Build</h4>
+      <p>We get to work and keep you updated throughout with regular check-ins.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <h4>Launch & Support</h4>
+      <p>We launch your project and provide ongoing support and maintenance.</p>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:48px;" class="reveal">
+    <a href="contact.html" class="btn-primary">📩 Start Your Project Today</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo"><div class="nav-logo-box"><span class="d">DIGI</span><div class="dl"></div><span class="p">PIXI</span></div><div class="nav-brand"><div class="name"><span class="digi">Digi</span><span class="pixi">Pixi</span></div><span class="ltd">Limited</span></div></a>
+      <p>Your trusted UK web digital agency. We design, build and grow businesses online.</p>
+    </div>
+    <div class="footer-col"><h4>Services</h4><ul><li><a href="services.html">Web Design</a></li><li><a href="services.html">Logo & Branding</a></li><li><a href="services.html">Google Ads</a></li><li><a href="services.html">Social Media</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="portfolio.html">Our Work</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:hello@digipixi.co.uk">hello@digipixi.co.uk</a></li><li><a href="tel:+4407368471349">+44 07368 471 349</a></li><li><a href="#">digipixi.co.uk</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 <span>DigiPixi Limited</span>. All rights reserved.</p>
+    <div class="footer-socials"><a href="#" class="social-btn">📘</a><a href="#" class="social-btn">📸</a><a href="#" class="social-btn">💼</a></div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>

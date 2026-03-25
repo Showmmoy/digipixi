@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Pricing — DigiPixi Limited</title>
+<link rel="stylesheet" href="css/style.css"/>
+<style>
+.pricing-hero{padding:140px 60px 80px;text-align:center;position:relative;overflow:hidden;}
+.pricing-hero .grid-bg{opacity:.6;}
+.hero-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:300px;background:radial-gradient(ellipse,rgba(0,229,255,.07) 0%,transparent 70%);}
+.pricing-section{padding:80px 60px 120px;}
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:56px;}
+.pricing-card{background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:36px;position:relative;transition:all .4s;}
+.pricing-card.popular{border-color:rgba(0,229,255,.4);box-shadow:0 0 40px rgba(0,229,255,.08);}
+.popular-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--grad);padding:5px 20px;border-radius:20px;font-family:'Syne',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;color:#fff;white-space:nowrap;}
+.pricing-card:hover{transform:translateY(-6px);box-shadow:0 24px 60px rgba(0,0,0,.4);}
+.pricing-card h3{font-family:'Syne',sans-serif;font-size:16px;font-weight:700;color:var(--cyan);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;}
+.pricing-card .price{font-family:'Bebas Neue',sans-serif;font-size:64px;color:#fff;line-height:1;margin:16px 0 4px;}
+.pricing-card .price span{font-family:'DM Sans',sans-serif;font-size:16px;color:var(--grey);font-weight:300;}
+.pricing-card .price-note{font-size:12px;color:var(--grey);margin-bottom:24px;}
+.pricing-divider{height:1px;background:rgba(255,255,255,.06);margin:24px 0;}
+.pricing-features{list-style:none;display:flex;flex-direction:column;gap:12px;margin-bottom:28px;}
+.pricing-features li{font-size:13px;color:var(--light);display:flex;align-items:center;gap:10px;}
+.pricing-features li.yes::before{content:'✓';color:var(--cyan);font-weight:700;}
+.pricing-features li.no{color:var(--grey);opacity:.5;}
+.pricing-features li.no::before{content:'✗';color:var(--grey);}
+.faq-section{padding:100px 60px;background:var(--bg2);}
+.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:56px;}
+.faq-item{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:24px;cursor:pointer;transition:all .3s;}
+.faq-item:hover{border-color:rgba(0,229,255,.25);}
+.faq-q{font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:#fff;display:flex;justify-content:space-between;align-items:center;gap:12px;}
+.faq-q span{color:var(--cyan);font-size:18px;transition:transform .3s;flex-shrink:0;}
+.faq-a{font-size:13px;color:var(--grey);line-height:1.7;margin-top:12px;display:none;}
+.faq-item.open .faq-a{display:block;}
+.faq-item.open .faq-q span{transform:rotate(45deg);}
+@media(max-width:1024px){.pricing-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:768px){.pricing-hero,.pricing-section,.faq-section{padding:80px 24px 60px;}.pricing-grid{grid-template-columns:1fr;}.faq-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div class="cursor" id="cursor"></div>
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-box"><span class="d">DIGI</span><div class="dl"></div><span class="p">PIXI</span></div>
+    <div class="nav-brand">
+      <div class="name"><span class="digi">Digi</span><span class="pixi">Pixi</span></div>
+      <span class="ltd">Limited</span>
+    </div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="portfolio.html">Work</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="contact.html" class="nav-cta">Get In Touch</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<section class="pricing-hero">
+  <div class="grid-bg"></div>
+  <div class="hero-glow"></div>
+  <div style="position:relative;z-index:2;" class="reveal">
+    <p class="section-eyebrow">Transparent Pricing</p>
+    <h1 class="section-title">Simple Pricing.<br/><span class="outline">No Hidden Fees.</span></h1>
+    <div class="accent-bar" style="margin:16px auto;"></div>
+    <p class="section-sub" style="margin:0 auto;">Choose the package that fits your business. All prices are starting from — final quote depends on your specific requirements.</p>
+  </div>
+</section>
+
+<section class="pricing-section">
+  <div class="pricing-grid stagger">
+
+    <div class="pricing-card">
+      <h3>Starter</h3>
+      <div class="price">£299<span> from</span></div>
+      <p class="price-note">Perfect for new businesses</p>
+      <div class="pricing-divider"></div>
+      <ul class="pricing-features">
+        <li class="yes">1–5 page website</li>
+        <li class="yes">Mobile responsive</li>
+        <li class="yes">Contact form</li>
+        <li class="yes">Basic SEO setup</li>
+        <li class="yes">Google My Business setup</li>
+        <li class="yes">1 month free support</li>
+        <li class="no">Logo design</li>
+        <li class="no">Social media setup</li>
+      </ul>
+      <a href="contact.html" class="btn-secondary" style="width:100%;justify-content:center;">Get Started</a>
+    </div>
+
+    <div class="pricing-card popular">
+      <div class="popular-badge">⭐ MOST POPULAR</div>
+      <h3>Growth</h3>
+      <div class="price">£699<span> from</span></div>
+      <p class="price-note">Best for growing businesses</p>
+      <div class="pricing-divider"></div>
+      <ul class="pricing-features">
+        <li class="yes">5–10 page website</li>
+        <li class="yes">Mobile responsive</li>
+        <li class="yes">Logo design included</li>
+        <li class="yes">Full SEO optimisation</li>
+        <li class="yes">Google My Business</li>
+        <li class="yes">Social media setup</li>
+        <li class="yes">3 months free support</li>
+        <li class="yes">Speed optimisation</li>
+      </ul>
+      <a href="contact.html" class="btn-primary" style="width:100%;justify-content:center;">Get Started</a>
+    </div>
+
+    <div class="pricing-card">
+      <h3>Premium</h3>
+      <div class="price">£1499<span> from</span></div>
+      <p class="price-note">For established businesses</p>
+      <div class="pricing-divider"></div>
+      <ul class="pricing-features">
+        <li class="yes">Unlimited pages</li>
+        <li class="yes">Ecommerce / booking</li>
+        <li class="yes">Full brand identity</li>
+        <li class="yes">Advanced SEO</li>
+        <li class="yes">Google Ads setup</li>
+        <li class="yes">Social media management</li>
+        <li class="yes">6 months free support</li>
+        <li class="yes">Priority delivery</li>
+      </ul>
+      <a href="contact.html" class="btn-secondary" style="width:100%;justify-content:center;">Get Started</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="reveal" style="text-align:center;">
+    <p class="section-eyebrow">Got Questions?</p>
+    <h2 class="section-title">Frequently Asked<br/><span class="outline">Questions.</span></h2>
+    <div class="accent-bar" style="margin:16px auto;"></div>
+  </div>
+  <div class="faq-grid">
+    <div class="faq-item" onclick="this.classList.toggle('open')">
+      <div class="faq-q">How long does a website take? <span>+</span></div>
+      <div class="faq-a">Most websites are delivered within 2–3 weeks. For urgent projects we offer a 2–3 day fast-track delivery. Timeline depends on how quickly you can provide content and feedback.</div>
+    </div>
+    <div class="faq-item" onclick="this.classList.toggle('open')">
+      <div class="faq-q">Do you require a deposit? <span>+</span></div>
+      <div class="faq-a">Yes — we require a 50% deposit before starting work. The remaining 50% is due upon completion before we hand over the final files or launch the website.</div>
+    </div>
+    <div class="faq-item" onclick="this.classList.toggle('open')">
+      <div class="faq-q">What do I need to provide? <span>+</span></div>
+      <div class="faq-a">We'll need your business information, any existing logos or brand materials, content (text and images) for your website, and feedback during the design process. Don't worry — we guide you through everything.</div>
+    </div>
+    <div class="faq-item" onclick="this.classList.toggle('open')">
+      <div class="faq-q">Do you offer payment plans? <span>+</span></div>
+      <div class="faq-a">Yes! For larger projects we can arrange installment payments. Contact us to discuss a payment plan that works for your budget.</div>
+    </div>
+    <div class="faq-item" onclick="this.classList.toggle('open')">
+      <div class="faq-q">Will my website work on mobile? <span>+</span></div>
+      <div class="faq-a">Absolutely. Every website we build is fully mobile responsive and tested across all devices and browsers before delivery.</div>
+    </div>
+    <div class="faq-item" onclick="this.classList.toggle('open')">
+      <div class="faq-q">Do you provide hosting? <span>+</span></div>
+      <div class="faq-a">We can recommend hosting solutions and help you set everything up. Hosting costs are separate from our design fees and depend on your chosen provider.</div>
+    </div>
+    <div class="faq-item" onclick="this.classList.toggle('open')">
+      <div class="faq-q">What happens after launch? <span>+</span></div>
+      <div class="faq-a">All packages include free post-launch support. We also offer ongoing maintenance packages starting from £59/month to keep your website updated and secure.</div>
+    </div>
+    <div class="faq-item" onclick="this.classList.toggle('open')">
+      <div class="faq-q">Can I update the website myself? <span>+</span></div>
+      <div class="faq-a">Yes! We build on WordPress with Elementor so you can easily update content yourself. We also provide a basic training session so you feel confident managing your site.</div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand"><a href="index.html" class="nav-logo"><div class="nav-logo-box"><span class="d">DIGI</span><div class="dl"></div><span class="p">PIXI</span></div><div class="nav-brand"><div class="name"><span class="digi">Digi</span><span class="pixi">Pixi</span></div><span class="ltd">Limited</span></div></a><p>Your trusted UK web digital agency.</p></div>
+    <div class="footer-col"><h4>Services</h4><ul><li><a href="services.html">Web Design</a></li><li><a href="services.html">Branding</a></li><li><a href="services.html">Google Ads</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="portfolio.html">Our Work</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:hello@digipixi.co.uk">hello@digipixi.co.uk</a></li><li><a href="tel:+4407368471349">+44 07368 471 349</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>© 2025 <span>DigiPixi Limited</span>. All rights reserved.</p><div class="footer-socials"><a href="#" class="social-btn">📘</a><a href="#" class="social-btn">📸</a></div></div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>

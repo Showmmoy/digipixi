@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Our Work — DigiPixi Limited</title>
+<link rel="stylesheet" href="css/style.css"/>
+<style>
+.port-hero{padding:140px 60px 80px;text-align:center;position:relative;overflow:hidden;}
+.port-hero .grid-bg{opacity:.6;}
+.hero-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:300px;background:radial-gradient(ellipse,rgba(0,229,255,.07) 0%,transparent 70%);}
+.port-section{padding:80px 60px 120px;}
+.filter-tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:48px;}
+.filter-btn{padding:8px 20px;border:1px solid rgba(0,229,255,.15);border-radius:3px;background:rgba(0,229,255,.03);font-family:'Syne',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--light);cursor:pointer;transition:all .3s;}
+.filter-btn:hover,.filter-btn.active{background:rgba(0,229,255,.1);border-color:var(--cyan);color:var(--cyan);}
+.port-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.port-card{background:var(--bg3);border:1px solid var(--border);border-radius:8px;overflow:hidden;transition:all .4s;cursor:pointer;}
+.port-card:hover{transform:translateY(-6px);border-color:rgba(0,229,255,.3);box-shadow:0 20px 60px rgba(0,0,0,.5);}
+.port-card.hidden{display:none;}
+.port-mockup{height:200px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
+.browser-bar{display:flex;align-items:center;gap:5px;padding:7px 10px;background:#141420;}
+.browser-dot{width:7px;height:7px;border-radius:50%;}
+.browser-url{flex:1;background:rgba(255,255,255,.06);border-radius:3px;padding:3px 8px;font-size:8px;color:rgba(255,255,255,.3);}
+.browser-wrap{width:85%;background:#0A0A12;border-radius:6px;overflow:hidden;border:1px solid rgba(255,255,255,.08);box-shadow:0 10px 40px rgba(0,0,0,.6);}
+.browser-content{padding:10px;}
+.bar{height:7px;border-radius:2px;margin-bottom:6px;}
+.line{height:3.5px;background:rgba(255,255,255,.06);border-radius:2px;margin-bottom:4px;}
+.port-info{padding:18px 20px;}
+.port-cat{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--cyan);opacity:.6;margin-bottom:5px;}
+.port-info h3{font-family:'Syne',sans-serif;font-size:15px;font-weight:700;color:#fff;margin-bottom:5px;}
+.port-info p{font-size:12px;color:var(--grey);line-height:1.5;}
+.port-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px;}
+.ptag{padding:2px 8px;border:1px solid rgba(0,229,255,.12);border-radius:2px;font-size:9px;color:var(--light);}
+
+/* TESTIMONIALS */
+.test-section{padding:100px 60px;background:var(--bg2);}
+.test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:56px;}
+.test-card{background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:28px;transition:all .3s;}
+.test-card:hover{border-color:rgba(0,229,255,.25);transform:translateY(-4px);}
+.test-stars{color:#FFD700;font-size:14px;margin-bottom:14px;letter-spacing:2px;}
+.test-quote{font-size:13.5px;color:var(--light);line-height:1.7;margin-bottom:20px;font-style:italic;}
+.test-quote::before{content:'"';font-family:'Bebas Neue',sans-serif;font-size:48px;color:rgba(0,229,255,.15);line-height:.5;display:block;margin-bottom:8px;}
+.test-author{display:flex;align-items:center;gap:12px;}
+.test-avatar{width:42px;height:42px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:18px;color:#fff;flex-shrink:0;}
+.test-author-info strong{display:block;font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:#fff;}
+.test-author-info span{font-size:11px;color:var(--grey);}
+
+@media(max-width:1024px){.port-grid,.test-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:768px){.port-hero,.port-section,.test-section{padding:80px 24px 60px;}.port-grid,.test-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div class="cursor" id="cursor"></div>
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-box"><span class="d">DIGI</span><div class="dl"></div><span class="p">PIXI</span></div>
+    <div class="nav-brand">
+      <div class="name"><span class="digi">Digi</span><span class="pixi">Pixi</span></div>
+      <span class="ltd">Limited</span>
+    </div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="portfolio.html" class="active">Work</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="contact.html" class="nav-cta">Get In Touch</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<section class="port-hero">
+  <div class="grid-bg"></div>
+  <div class="hero-glow"></div>
+  <div style="position:relative;z-index:2;" class="reveal">
+    <p class="section-eyebrow">Our Work</p>
+    <h1 class="section-title">Brands We've<br/><span class="outline">Built.</span></h1>
+    <div class="accent-bar" style="margin:16px auto;"></div>
+    <p class="section-sub" style="margin:0 auto;">From restaurants to real estate — here's how we help businesses stand out.</p>
+  </div>
+</section>
+
+<section class="port-section">
+  <div class="filter-tabs">
+    <button class="filter-btn active" onclick="filterCards('all',this)">All Projects</button>
+    <button class="filter-btn" onclick="filterCards('website',this)">Websites</button>
+    <button class="filter-btn" onclick="filterCards('logo',this)">Logo & Brand</button>
+    <button class="filter-btn" onclick="filterCards('social',this)">Social Media</button>
+  </div>
+  <div class="port-grid">
+
+    <div class="port-card reveal" data-type="website">
+      <div class="port-mockup" style="background:linear-gradient(135deg,#0D0D0D,#1A0A00);">
+        <div class="browser-wrap">
+          <div class="browser-bar"><div class="browser-dot" style="background:#FF5F57"></div><div class="browser-dot" style="background:#FEBC2E"></div><div class="browser-dot" style="background:#28C840"></div><div class="browser-url">napolicrust.co.uk</div></div>
+          <div class="browser-content"><div class="bar" style="background:linear-gradient(90deg,#FF6B35,#FF8C42);width:55%;"></div><div class="line" style="width:40%"></div><div class="line" style="width:65%"></div><div class="line"></div></div>
+        </div>
+      </div>
+      <div class="port-info">
+        <p class="port-cat">Restaurant · Website</p>
+        <h3>Napoli Crust Restaurant</h3>
+        <p>Full website with online menu & reservations for an Italian restaurant.</p>
+        <div class="port-tags"><span class="ptag">Web Design</span><span class="ptag">UI/UX</span><span class="ptag">Mobile</span></div>
+      </div>
+    </div>
+
+    <div class="port-card reveal" data-type="logo">
+      <div class="port-mockup" style="background:linear-gradient(135deg,#050510,#0A0520);">
+        <div style="text-align:center;">
+          <div style="border:1.5px solid rgba(255,182,193,.4);padding:14px 22px;border-radius:4px;display:inline-block;">
+            <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;color:#FFB6C1;letter-spacing:2px;">VELOUR</div>
+            <div style="height:1px;background:rgba(255,182,193,.3);margin:4px 0;"></div>
+            <div style="font-size:8px;letter-spacing:5px;color:rgba(255,182,193,.5);font-family:'DM Sans',sans-serif;">HAIR STUDIO</div>
+          </div>
+        </div>
+      </div>
+      <div class="port-info">
+        <p class="port-cat">Hair Salon · Branding</p>
+        <h3>Velour Hair Studio</h3>
+        <p>Complete brand identity including logo, colour palette and social kit.</p>
+        <div class="port-tags"><span class="ptag">Logo</span><span class="ptag">Brand Identity</span><span class="ptag">Print</span></div>
+      </div>
+    </div>
+
+    <div class="port-card reveal" data-type="social">
+      <div class="port-mockup" style="background:linear-gradient(135deg,#1A2A1A,#0D1F0D);">
+        <div style="background:linear-gradient(135deg,#1A2A1A,#0D1F0D);border:1px solid rgba(74,222,128,.2);border-radius:6px;padding:20px;text-align:center;width:160px;">
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:11px;letter-spacing:4px;color:rgba(74,222,128,.6);margin-bottom:6px;">BREW & CO.</div>
+          <div style="font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:#fff;margin-bottom:6px;">Morning Ritual.</div>
+          <div style="width:30px;height:1.5px;background:linear-gradient(90deg,#4ADE80,#22C55E);margin:0 auto;"></div>
+        </div>
+      </div>
+      <div class="port-info">
+        <p class="port-cat">Coffee Shop · Social</p>
+        <h3>Brew & Co. Coffee</h3>
+        <p>Monthly social media content pack for a specialty coffee brand.</p>
+        <div class="port-tags"><span class="ptag">Instagram</span><span class="ptag">Content</span><span class="ptag">Facebook</span></div>
+      </div>
+    </div>
+
+    <div class="port-card reveal" data-type="website">
+      <div class="port-mockup" style="background:linear-gradient(135deg,#050510,#0A0520);">
+        <div class="browser-wrap">
+          <div class="browser-bar"><div class="browser-dot" style="background:#FF5F57"></div><div class="browser-dot" style="background:#FEBC2E"></div><div class="browser-dot" style="background:#28C840"></div><div class="browser-url">spicepalace.co.uk</div></div>
+          <div class="browser-content"><div class="bar" style="background:linear-gradient(90deg,#FF9500,#FFB800);width:50%;"></div><div class="line" style="width:40%"></div><div class="line" style="width:70%"></div></div>
+        </div>
+      </div>
+      <div class="port-info">
+        <p class="port-cat">Takeaway · Website + GMB</p>
+        <h3>Spice Palace Takeaway</h3>
+        <p>Online ordering website with full menu management and GMB setup.</p>
+        <div class="port-tags"><span class="ptag">Web Design</span><span class="ptag">GMB</span><span class="ptag">SEO</span></div>
+      </div>
+    </div>
+
+    <div class="port-card reveal" data-type="logo">
+      <div class="port-mockup" style="background:linear-gradient(135deg,#080A05,#101505);">
+        <div style="text-align:center;">
+          <div style="background:rgba(212,175,55,.05);border:1.5px solid rgba(212,175,55,.35);padding:14px 22px;border-radius:4px;display:inline-block;">
+            <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;color:#D4AF37;letter-spacing:-.5px;">SHARP</div>
+            <div style="height:1px;background:rgba(212,175,55,.3);margin:4px 0;"></div>
+            <div style="font-size:8px;letter-spacing:5px;color:rgba(212,175,55,.5);font-family:'DM Sans',sans-serif;">BARBERSHOP</div>
+          </div>
+        </div>
+      </div>
+      <div class="port-info">
+        <p class="port-cat">Barbershop · Branding</p>
+        <h3>Sharp Barbershop</h3>
+        <p>Bold gold and black brand identity with logo, cards and signage.</p>
+        <div class="port-tags"><span class="ptag">Logo</span><span class="ptag">Signage</span><span class="ptag">Brand Kit</span></div>
+      </div>
+    </div>
+
+    <div class="port-card reveal" data-type="website">
+      <div class="port-mockup" style="background:linear-gradient(135deg,#050A10,#051520);">
+        <div class="browser-wrap">
+          <div class="browser-bar"><div class="browser-dot" style="background:#FF5F57"></div><div class="browser-dot" style="background:#FEBC2E"></div><div class="browser-dot" style="background:#28C840"></div><div class="browser-url">elitefit.co.uk</div></div>
+          <div class="browser-content"><div class="bar" style="background:linear-gradient(90deg,#00E5FF,#0099AA);width:58%;"></div><div class="line" style="width:40%"></div><div class="line" style="width:65%"></div></div>
+        </div>
+      </div>
+      <div class="port-info">
+        <p class="port-cat">Fitness · Website</p>
+        <h3>Elite Fit — Personal Trainer</h3>
+        <p>High-converting landing page with booking system and testimonials.</p>
+        <div class="port-tags"><span class="ptag">Landing Page</span><span class="ptag">Booking</span><span class="ptag">UI/UX</span></div>
+      </div>
+    </div>
+
+  </div>
+  <div style="text-align:center;margin-top:48px;" class="reveal">
+    <a href="contact.html" class="btn-primary">🚀 Start Your Project</a>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="test-section">
+  <div class="reveal" style="text-align:center;">
+    <p class="section-eyebrow">What Clients Say</p>
+    <h2 class="section-title">Don't Take Our<br/><span class="outline">Word For It.</span></h2>
+    <div class="accent-bar" style="margin:16px auto;"></div>
+  </div>
+  <div class="test-grid stagger">
+    <div class="test-card">
+      <div class="test-stars">★★★★★</div>
+      <p class="test-quote">DigiPixi transformed our online presence completely. We went from zero website to getting 20+ enquiries a week. Absolutely brilliant team.</p>
+      <div class="test-author">
+        <div class="test-avatar">MK</div>
+        <div class="test-author-info"><strong>Mohammed K.</strong><span>Spice Palace Takeaway</span></div>
+      </div>
+    </div>
+    <div class="test-card">
+      <div class="test-stars">★★★★★</div>
+      <p class="test-quote">Our new logo and website are incredible. Clients constantly compliment our branding now. Worth every penny — delivered in under 2 weeks!</p>
+      <div class="test-author">
+        <div class="test-avatar">SL</div>
+        <div class="test-author-info"><strong>Sarah L.</strong><span>Velour Hair Studio</span></div>
+      </div>
+    </div>
+    <div class="test-card">
+      <div class="test-stars">★★★★★</div>
+      <p class="test-quote">I was sceptical at first but DigiPixi delivered beyond expectations. My Google Ads campaign is generating leads daily. Highly recommended!</p>
+      <div class="test-author">
+        <div class="test-avatar">JR</div>
+        <div class="test-author-info"><strong>James R.</strong><span>Rapid Flow Plumbing</span></div>
+      </div>
+    </div>
+    <div class="test-card">
+      <div class="test-stars">★★★★★</div>
+      <p class="test-quote">The social media content they create for us is always on point. Our Instagram following has grown 400% in 3 months. Amazing results!</p>
+      <div class="test-author">
+        <div class="test-avatar">AN</div>
+        <div class="test-author-info"><strong>Aisha N.</strong><span>Luxe Nails Studio</span></div>
+      </div>
+    </div>
+    <div class="test-card">
+      <div class="test-stars">★★★★★</div>
+      <p class="test-quote">Fast, professional and genuinely care about your business. They set up our Google My Business and we started appearing on Maps within days.</p>
+      <div class="test-author">
+        <div class="test-avatar">TC</div>
+        <div class="test-author-info"><strong>Tom C.</strong><span>Sharp Barbershop</span></div>
+      </div>
+    </div>
+    <div class="test-card">
+      <div class="test-stars">★★★★★</div>
+      <p class="test-quote">DigiPixi is the best investment I made for my personal training business. The website looks stunning and bookings have doubled since launch.</p>
+      <div class="test-author">
+        <div class="test-avatar">MP</div>
+        <div class="test-author-info"><strong>Mark P.</strong><span>Elite Fit PT</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand"><a href="index.html" class="nav-logo"><div class="nav-logo-box"><span class="d">DIGI</span><div class="dl"></div><span class="p">PIXI</span></div><div class="nav-brand"><div class="name"><span class="digi">Digi</span><span class="pixi">Pixi</span></div><span class="ltd">Limited</span></div></a><p>Your trusted UK web digital agency.</p></div>
+    <div class="footer-col"><h4>Services</h4><ul><li><a href="services.html">Web Design</a></li><li><a href="services.html">Branding</a></li><li><a href="services.html">Google Ads</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:hello@digipixi.co.uk">hello@digipixi.co.uk</a></li><li><a href="tel:+4407368471349">+44 07368 471 349</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>© 2025 <span>DigiPixi Limited</span>. All rights reserved.</p><div class="footer-socials"><a href="#" class="social-btn">📘</a><a href="#" class="social-btn">📸</a></div></div>
+</footer>
+<script src="js/main.js"></script>
+<script>
+function filterCards(type,btn){
+  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.port-card').forEach(c=>{
+    c.classList.toggle('hidden',type!=='all'&&c.dataset.type!==type);
+  });
+}
+</script>
+</body>
+</html>
