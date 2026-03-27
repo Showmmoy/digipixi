@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Blog — DigiPixi Limited</title>
+<link rel="stylesheet" href="css/style.css"/>
+<style>
+.post-hero{padding:140px 60px 60px;text-align:center;position:relative;overflow:hidden;}
+.post-hero .grid-bg{opacity:.6;}
+.hero-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:300px;background:radial-gradient(ellipse,rgba(0,229,255,.07) 0%,transparent 70%);}
+.post-wrap{max-width:780px;margin:0 auto;padding:0 60px 120px;}
+.post-thumb-lg{height:300px;display:flex;align-items:center;justify-content:center;font-size:80px;border-radius:10px;margin-bottom:40px;border:1px solid var(--border);}
+.post-meta-bar{display:flex;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap;}
+.post-cat-tag{padding:4px 12px;border:1px solid rgba(0,229,255,.25);border-radius:2px;font-family:'Syne',sans-serif;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--cyan);}
+.post-date-tag{font-size:11px;color:var(--grey);}
+.post-wrap h1{font-family:'Syne',sans-serif;font-size:clamp(24px,4vw,40px);font-weight:800;color:#fff;line-height:1.2;margin-bottom:16px;}
+.post-excerpt{font-size:15px;color:var(--light);line-height:1.75;margin-bottom:32px;padding-bottom:32px;border-bottom:1px solid var(--border);}
+.post-body{color:var(--light);font-size:14.5px;line-height:1.85;}
+.post-body p{margin-bottom:18px;}
+.post-body strong{color:#fff;}
+.post-body h2{font-family:'Syne',sans-serif;font-size:21px;font-weight:700;color:#fff;margin:36px 0 14px;padding-left:14px;border-left:3px solid var(--cyan);}
+.post-body h3{font-family:'Syne',sans-serif;font-size:16px;font-weight:700;color:var(--cyan);margin:26px 0 10px;}
+.post-cta{background:var(--bg3);border:1px solid rgba(0,229,255,.2);border-radius:10px;padding:36px;text-align:center;margin-top:60px;}
+.post-cta h3{font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:#fff;margin-bottom:10px;}
+.post-cta p{font-size:13px;color:var(--grey);margin-bottom:24px;line-height:1.7;}
+.back-link{display:inline-flex;align-items:center;gap:8px;font-family:'Syne',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--cyan);opacity:.7;text-decoration:none;margin-bottom:32px;transition:opacity .2s;}
+.back-link:hover{opacity:1;}
+.not-found{text-align:center;padding:80px 24px;color:var(--grey);}
+.not-found h2{font-family:'Syne',sans-serif;font-size:28px;font-weight:800;color:#fff;margin-bottom:12px;}
+.not-found p{font-size:14px;margin-bottom:28px;}
+@media(max-width:768px){
+  .post-hero{padding:100px 24px 40px;}
+  .post-wrap{padding:0 24px 80px;}
+  .post-thumb-lg{height:180px;font-size:52px;}
+}
+</style>
+</head>
+<body>
+<div class="cursor" id="cursor"></div>
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-box"><span class="d">DIGI</span><div class="dl"></div><span class="p">PIXI</span></div>
+    <div class="nav-brand">
+      <div class="name"><span class="digi">Digi</span><span class="pixi">Pixi</span></div>
+      <span class="ltd">Limited</span>
+    </div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="portfolio.html">Work</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="blog.html" class="active">Blog</a></li>
+    <li><a href="contact.html" class="nav-cta">Get In Touch</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<section class="post-hero">
+  <div class="grid-bg"></div>
+  <div class="hero-glow"></div>
+  <div style="position:relative;z-index:2;">
+    <p class="section-eyebrow" id="heroCategory">Knowledge Hub</p>
+    <h1 class="section-title" id="heroTitle" style="max-width:760px;margin:0 auto;">Loading...</h1>
+  </div>
+</section>
+
+<div class="post-wrap">
+  <a href="blog.html" class="back-link">← Back to Blog</a>
+  <div id="postArea"></div>
+</div>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand"><a href="index.html" class="nav-logo"><div class="nav-logo-box"><span class="d">DIGI</span><div class="dl"></div><span class="p">PIXI</span></div><div class="nav-brand"><div class="name"><span class="digi">Digi</span><span class="pixi">Pixi</span></div><span class="ltd">Limited</span></div></a><p>Your trusted UK web digital agency.</p></div>
+    <div class="footer-col"><h4>Services</h4><ul><li><a href="services.html">Web Design</a></li><li><a href="services.html">Branding</a></li><li><a href="services.html">Google Ads</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="portfolio.html">Our Work</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:hello@digipixi.co.uk">hello@digipixi.co.uk</a></li><li><a href="tel:+4407368471349">+44 07368 471 349</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>© 2025 <span>DigiPixi Limited</span>. All rights reserved.</p><div class="footer-socials"><a href="#" class="social-btn">📘</a><a href="#" class="social-btn">📸</a></div></div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/blog-data.js"></script>
+<script>
+(function loadPost() {
+  const params = new URLSearchParams(location.search);
+  const id = params.get('id');
+  const post = dpGetPostById(id);
+
+  if (!post) {
+    document.getElementById('heroTitle').textContent = 'Post Not Found';
+    document.getElementById('heroCategory').textContent = 'Knowledge Hub';
+    document.getElementById('postArea').innerHTML = `
+      <div class="not-found">
+        <h2>Post not found</h2>
+        <p>This post doesn't exist or may have been removed.</p>
+        <a href="blog.html" class="btn-primary">← Back to Blog</a>
+      </div>`;
+    return;
+  }
+
+  document.title = post.title + ' — DigiPixi Limited';
+  document.getElementById('heroCategory').textContent = post.category;
+  document.getElementById('heroTitle').textContent = post.title;
+
+  function parseContent(raw) {
+    const lines = raw.split('\n');
+    let html = '';
+    let paragraph = [];
+    function flushParagraph() {
+      if (paragraph.length) {
+        const text = paragraph.join(' ').trim();
+        if (text) html += `<p>${text}</p>`;
+        paragraph = [];
+      }
+    }
+    lines.forEach(line => {
+      if (line.startsWith('## ')) { flushParagraph(); html += `<h2>${line.slice(3)}</h2>`; }
+      else if (line.startsWith('### ')) { flushParagraph(); html += `<h3>${line.slice(4)}</h3>`; }
+      else if (line.trim() === '') { flushParagraph(); }
+      else { paragraph.push(line); }
+    });
+    flushParagraph();
+    return html;
+  }
+
+  document.getElementById('postArea').innerHTML = `
+    <div class="post-thumb-lg" style="background:${post.bg || 'linear-gradient(135deg,#060E1C,#0A1628)'}">
+      ${post.icon || '📝'}
+    </div>
+    <div class="post-meta-bar">
+      <span class="post-cat-tag">${post.category}</span>
+      <span class="post-date-tag">${post.date}</span>
+    </div>
+    <h1>${post.title}</h1>
+    <p class="post-excerpt">${post.excerpt}</p>
+    <div class="post-body">${parseContent(post.content)}</div>
+    <div class="post-cta">
+      <h3>Ready to grow your business online?</h3>
+      <p>DigiPixi offers professional web design, SEO, branding and digital marketing for UK businesses — all at transparent, honest prices.</p>
+      <a href="contact.html" class="btn-primary">Get a Free Consultation →</a>
+    </div>
+  `;
+})();
+</script>
+</body>
+</html>
